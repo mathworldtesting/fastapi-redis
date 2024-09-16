@@ -33,12 +33,12 @@ headers = {
 # parameters passed as part of the URL.
 @app.get("/american-football/fetch/{league}/{season}")
 def fetch_football_details(league: str, season: str):    
+    pdb.set_trace()
     # cache_key: The key used to store and retrieve data in Redis. 
     # It is generated based on the league and season to make each entry unique.
     # my_cache = rediser.get(cache_key): This checks if there is already cached 
     # data in Redis for the given league and season. If there is a cache hit, 
     # the value is assigned to my_cache.
-    pdb.set_trace()
     cache_key:str = f"league:{league}:season:{season}"
     my_cache = rediser.get(cache_key)
     
