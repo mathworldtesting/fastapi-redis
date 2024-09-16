@@ -3,6 +3,7 @@ import requests
 import redis
 import json
 import pdb
+import uvicorn
 
 
 # This initializes a connection to a local Redis instance, running on the 
@@ -58,3 +59,7 @@ def fetch_football_details(league: str, season: str):
     
     return results.json()
 
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", port=8000, reload=True)
