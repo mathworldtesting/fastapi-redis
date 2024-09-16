@@ -16,7 +16,7 @@ app = FastAPI()
 
 # This defines a basic route at the root ("/") of the API, 
 # which returns the string "Hello World" when accessed via a GET request.
-@app.get("/")
+@app.get("/hello")
 def read_root():
     return "Hellow World"
 
@@ -32,8 +32,7 @@ headers = {
 # where league and season are dynamic path 
 # parameters passed as part of the URL.
 @app.get("/american-football/fetch/{league}/{season}")
-def fetch_football_details(league: str, season: str):    
-    pdb.set_trace()
+def fetch_football_details(league: str, season: str):        
     # cache_key: The key used to store and retrieve data in Redis. 
     # It is generated based on the league and season to make each entry unique.
     # my_cache = rediser.get(cache_key): This checks if there is already cached 
