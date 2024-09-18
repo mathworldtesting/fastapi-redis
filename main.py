@@ -64,3 +64,18 @@ async def read_title_by_query(book_title: str):
 async def create_book(new_book=Body()):
     BOOKS.append(new_book)
 
+
+@app.put("/books/{book_id}")
+async def update_book_by_id(book_id: int, updated_book=Body()):
+    for book in BOOKS:
+        if book.get('id') == book_id:
+            book.update(updated_book)
+            return book
+
+
+@app.delete("/books/{book_id}")
+async def delete_book_by_id(book_id: int):
+    for book in BOOKS:
+        if book.get('id') == book_id:
+            BOOKS.remove(book)
+            return book
