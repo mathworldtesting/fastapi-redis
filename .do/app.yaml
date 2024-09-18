@@ -1,0 +1,14 @@
+name: fastapi-redis  # Choose a descriptive name for your app
+
+services:
+- name: web  # Name of your main web service
+  git:
+    repo_clone_url: git@github.com:mathworldtesting/fastapi-redis.git
+    branch: DEVELOPMENT  # Specify the branch you want to deploy
+  run_command: uvicorn main:app --host 0.0.0.0 --port 8000  # Adjust if your main file or app instance name is different
+  environment_slug: python  # Choose the appropriate Python environment slug
+  http_port: 8000
+  instance_size_slug: basic-xxs  # Start with a small instance size and scale as needed
+  instance_count: 1
+
+# Add more services if your project has additional components (e.g., worker processes, databases)
