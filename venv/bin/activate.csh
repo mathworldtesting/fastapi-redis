@@ -9,11 +9,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-<<<<<<< HEAD
 setenv VIRTUAL_ENV "/home/yraheem1976/projects/_GitHub_/Practice/fastapi-redis/venv"
-=======
-setenv VIRTUAL_ENV "/home/yraheem/_GitHub/microservices/Practice/fastapi-redis/venv"
->>>>>>> bcfc0075eb07d5d2d63cc5b3f9193e4104dec62b
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"
