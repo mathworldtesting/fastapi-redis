@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/home/yraheem1976/projects/_GitHub_/Practice/fastapi-redis/venv/bin/python3.12
+=======
+#!/home/yraheem/_GitHub/microservices/Practice/fastapi-redis/venv/bin/python3.12
+>>>>>>> bcfc0075eb07d5d2d63cc5b3f9193e4104dec62b
 # -*- coding: utf-8 -*-
 import re
 import sys
